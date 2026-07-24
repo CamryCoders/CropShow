@@ -45,9 +45,16 @@ def cropRecommend():
 
     confidence = probabilities[predicted_index] * 100
 
-    print("Recommended Crop:", crop)
-    print("Confidence:", round(confidence, 2), "%")
+    ans=[]
+    ans.append({
+        "crop":crop,
+        "confidence":confidence
+    })
+    print("crop",crop, "  confidence",confidence)
 
 
 
-    return crop,confidence
+    return jsonify({
+        "crop":crop,
+        "confidence":float(confidence)
+    })

@@ -12,7 +12,11 @@ crop_routes =Blueprint(
 crop_routes.route(
     "/crop_recommendation",
     methods=["GET"]
-)(cropRecommend)
+)(validate_input(cropRecommend))
+# @validate_input
+# def predict():
+    
+#     return cropRecommend()
 
 crop_routes.route(
     "/prob_chart",

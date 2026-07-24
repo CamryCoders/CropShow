@@ -46,7 +46,7 @@ def top_3_crops():
 
         top_3_crop.append({
             "crop":crop,
-            "probability": round(float(confidence*100),2)
+            "probability": round(float(confidence),2)
         })
         return top_3_crop
 
