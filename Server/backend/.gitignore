@@ -1,0 +1,27 @@
+# Python virtual environment
+Lib/
+Scripts/
+Include/
+pyvenv.cfg
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment variables and secrets
+.env
+.env.*
+
+# ML model files
+*.keras
+*.h5
+*.pkl
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
