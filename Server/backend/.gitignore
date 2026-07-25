@@ -14,9 +14,9 @@ __pycache__/
 .env
 .env.*
 
-*.keras
-*.h5
-*.pkl
+# *.keras
+# *.h5
+# *.pkl
 
 
 .ipynb_checkpoints/
