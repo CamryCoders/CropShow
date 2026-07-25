@@ -3,18 +3,9 @@ import numpy as np
 import joblib
 from flask import request
 import tensorflow as tf
+from src.load_data import model,scaler,label_encoder
 
-BASE_DIR=Path(__file__).resolve().parent.parent.parent
-model = tf.keras.models.load_model(
-    BASE_DIR/'models'/"crop_model.keras"
-)
-scaler = joblib.load(
-    BASE_DIR/'models'/"scaler.pkl"
-)
 
-label_encoder = joblib.load(
-    BASE_DIR/'models'/"label_encoder.pkl"
-)
 
 
 def show_prediction_chart(

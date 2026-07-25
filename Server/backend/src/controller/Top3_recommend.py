@@ -1,19 +1,10 @@
 from pathlib import Path
 import numpy as np
-import joblib
+
 import tensorflow as tf
 from flask import request
-BASE_DIR=Path(__file__).resolve().parent.parent.parent
-model = tf.keras.models.load_model(
-    BASE_DIR/'models'/"crop_model.keras"
-)
-scaler = joblib.load(
-    BASE_DIR/'models'/"scaler.pkl"
-)
+from src.load_data import model,scaler,label_encoder
 
-label_encoder = joblib.load(
-    BASE_DIR/'models'/"label_encoder.pkl"
-)
 
 def top_3_crops():
     data=request.get_json()
