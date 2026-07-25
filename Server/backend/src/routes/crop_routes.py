@@ -11,7 +11,7 @@ crop_routes =Blueprint(
 )
 crop_routes.route(
     "/crop_recommendation",
-    methods=["GET"]
+    methods=["POST"]
 )(validate_input(cropRecommend))
 # @validate_input
 # def predict():
@@ -20,14 +20,14 @@ crop_routes.route(
 
 crop_routes.route(
     "/prob_chart",
-    methods=["GET"]
+    methods=["POST"]
 )(show_prediction_chart)
 
 crop_routes.route(
     "/Top_3_crop",
-    methods=["GET"]
+    methods=["POST"]
 )(top_3_crops)
 crop_routes.route(
     "/fertilizer_suggestion",
-    methods=["GET"]
+    methods=["POST"]
 )(fertilizer_suggestion)
