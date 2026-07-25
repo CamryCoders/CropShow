@@ -8,11 +8,11 @@ import time
 
 
 def cropRecommend():
-     start = time.time()
+    start = time.time()
     print("CONTROLLER STARTED")
     
     data=request.get_json()
-print("After input extraction:", time.time() - start)
+    print("After input extraction:", time.time() - start)
 
     input_data=np.array([
         [data.get("N"),
