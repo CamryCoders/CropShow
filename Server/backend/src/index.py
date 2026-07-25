@@ -1,6 +1,6 @@
 from flask import Flask,jsonify
 from flask_cors import CORS
-from routes.crop_routes import crop_routes
+from src.routes.crop_routes import crop_routes
 
 def create_app():
     app=Flask(__name__)
