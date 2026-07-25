@@ -4,10 +4,15 @@ import tensorflow as tf
 from src.load_data import model,scaler,label_encoder
 import numpy as np
 import random
+import time
 
 
 def cropRecommend():
+     start = time.time()
+    print("CONTROLLER STARTED")
+    
     data=request.get_json()
+print("After input extraction:", time.time() - start)
 
     input_data=np.array([
         [data.get("N"),
@@ -20,11 +25,14 @@ def cropRecommend():
     ])
 
     input_scaled=scaler.transform(input_data,)
+    print("After scaling:", time.time() - start)
     probabilities = model.predict(input_scaled, verbose=0)[0]
+    print("After prediction:", time.time() - start)
     predicted_index = np.argmax(probabilities)
     crop = label_encoder.inverse_transform(
         [predicted_index]
     )[0]
+    print("After decoding:", time.time() - start)
 
     confidence = probabilities[predicted_index] * 100
 
@@ -85,6 +93,7 @@ def cropRecommend():
                   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiFmRowqpp2uhqxo98rhS1A7ZfRkC_IkRh9EkYMT5ytA&s=10"],
     }
     index=random.randint(0,1)
+    print("BEFORE RETURN:", time.time() - start)
    
 
     return jsonify({
