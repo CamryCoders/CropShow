@@ -3,7 +3,7 @@ import numpy as np
 import joblib
 from flask import request
 import tensorflow as tf
-from src.load_data import model,scaler,label_encoder
+from load_data import model,scaler,label_encoder
 
 
 
