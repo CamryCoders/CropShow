@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+
+
+@theme {
+  --animate-border-blink: border-blink 2s ease-in-out infinite;
+
+  @keyframes border-blink {
+    0%, 100% {
+      border-color: transparent;
+    }
+
+    50% {
+      border-color: green;
+    }
+  }
+}

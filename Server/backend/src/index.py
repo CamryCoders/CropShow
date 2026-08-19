@@ -3,7 +3,7 @@ import time
 from flask_cors import CORS
 start =time.time()
 print("INDEX: started",start)
-from src.routes.crop_routes import crop_routes
+from routes.crop_routes import crop_routes
 print("INDEX: routes imported",time.time()-start)
 
 def create_app():
