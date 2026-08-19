@@ -1,9 +1,9 @@
 from flask import Blueprint
-from middleware.validate_input import validate_input 
-from controller.prob_chart import show_prediction_chart
-from controller.crop_recommend import cropRecommend
-from controller.Top3_recommend import top_3_crops
-from controller.fertilizer_suggestion import fertilizer_suggestion
+from src.middleware.validate_input import validate_input 
+from src.controller.prob_chart import show_prediction_chart
+from src.controller.crop_recommend import cropRecommend
+from src.controller.Top3_recommend import top_3_crops
+from src.controller.fertilizer_suggestion import fertilizer_suggestion
 
 crop_routes =Blueprint(
     "crop_routes",
