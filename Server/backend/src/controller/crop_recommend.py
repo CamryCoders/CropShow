@@ -1,7 +1,11 @@
 from flask import Flask,request,jsonify
 from pathlib import Path
 import tensorflow as tf
+import time
+start=time.time()
+print("Before load",start)
 from src.load_data import model,scaler,label_encoder
+print("After load",time.time()-start)
 import numpy as np
 import random
 import time

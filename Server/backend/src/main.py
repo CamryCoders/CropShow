@@ -1,7 +1,7 @@
+from waitress import serve
 from src.index import app
 
 if __name__=="__main__":
-    app.run(
-        debug=True,
-        port=5000
-    ) 
+    print("Server is hoting on http://127.0.0.1:5000 ")
+    serve(app,host="127.0.0.1",port=5000)
+    
