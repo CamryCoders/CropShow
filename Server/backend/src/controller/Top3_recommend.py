@@ -3,7 +3,7 @@ import numpy as np
 
 import tensorflow as tf
 from flask import request
-from src.load_data import model,scaler,label_encoder
+from load_data import model,scaler,label_encoder
 
 
 def top_3_crops():
