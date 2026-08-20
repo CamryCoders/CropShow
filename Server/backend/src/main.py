@@ -1,5 +1,5 @@
 
-from index import app
+from src.index import app
 
 if __name__=="__main__":
     from waitress import serve
